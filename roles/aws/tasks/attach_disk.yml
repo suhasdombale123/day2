@@ -3,9 +3,9 @@
    ec2_vol:
       # aws_access_key: "{{ aws_access_key | b64decode }}"
       # aws_secret_key: "{{ aws_secret_key | b64decode }}"
-      instance: "{{ resource_config.instance_ids }}"
+      instance: "{{ resource_config.instance_id }}"
       region: "{{ resource_config.region }}"
-      volume_size: "{{ resource_config.volume_size }}"
+      volume_size: "{{ resource_config.disk_size }}"
       device_name: "{{ resource_config.disk_name }}"
       delete_on_termination: yes
 
