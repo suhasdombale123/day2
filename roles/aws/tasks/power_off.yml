@@ -1,0 +1,10 @@
+---
+ - name: To power OFF EC2 instance.
+   ec2:
+      # aws_access_key: "{{ aws_access_key | b64decode }}"
+      # aws_secret_key: "{{ aws_secret_key | b64decode }}"
+      instance_ids: "{{ resource_config.instance_ids }}"
+      region: "{{ resource_config.region }}"
+      state: stopped
+      wait: True
+      assign_public_ip: yes

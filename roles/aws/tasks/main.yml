@@ -1,0 +1,12 @@
+---
+# tasks file for aws
+ - import_tasks: power_on.yml
+   when: operation == "power_on"
+ - import_tasks: power_off.yml
+   when: operation == "power_off"
+ - import_tasks: terminate_instance.yml
+   when: operation == "terminate_instance"
+ - import_tasks: attach_disk.yml
+   when: operation == "attach_disk"
+ - import_tasks: detach_disk.yml
+   when: operation == "detach_disk"

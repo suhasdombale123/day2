@@ -1,0 +1,10 @@
+---
+  - name: To Power Off VM
+    azure_rm_virtualmachine:
+      # subscription_id: "{{ subscription_id }}"
+      # tenant: "{{ tenant }}"
+      # client_id: "{{ client_id }}"
+      # secret: "{{ secret }}"
+      resource_group: "{{ resource_config.resource_group }}"
+      name: "{{ resource_config.vm_name }}"
+      started: no

@@ -1,0 +1,24 @@
+---  
+  
+  - name: UnMounting disk to VM
+    azure_rm_manageddisk:
+      subscription_id: "{{ subscription_id }}"
+      tenant: "{{ tenant }}"
+      client_id: "{{ client_id }}"
+      secret: "{{ secret }}"
+      name: disk1
+      location: eastus
+      resource_group: "{{ resource_group }}"
+      managed_by: "{{ vm_name }}"
+      # disk_size_gb: 4
+  
+  - name: Delete disk to VM
+    azure_rm_manageddisk:
+      subscription_id: "{{ subscription_id }}"
+      tenant: "{{ tenant }}"
+      client_id: "{{ client_id }}"
+      secret: "{{ secret }}"
+      name: disk1
+      location: eastus
+      resource_group: "{{ resource_group }}"
+      state: absent

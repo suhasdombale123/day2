@@ -1,0 +1,23 @@
+---
+  - name: Create managed disk
+    azure_rm_manageddisk:
+      subscription_id: "{{ subscription_id }}"
+      tenant: "{{ tenant }}"
+      client_id: "{{ client_id }}"
+      secret: "{{ secret }}"
+      name: disk1
+      resource_group: "{{ resource_group }}"
+      disk_size_gb: 6
+
+
+  - name: Mounting disk to VM
+    azure_rm_manageddisk:
+      subscription_id: "{{ subscription_id }}"
+      tenant: "{{ tenant }}"
+      client_id: "{{ client_id }}"
+      secret: "{{ secret }}"
+      name: disk1
+      resource_group: "{{ resource_group }}"
+      disk_size_gb: 6
+      managed_by: "{{ vm_name }}"
+      attach_caching: read_only

@@ -1,0 +1,4 @@
+---
+# tasks file for gcp
+ - import_tasks: terminate_instance.yml
+   when: operation == "terminate_instance"

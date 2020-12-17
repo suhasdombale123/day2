@@ -1,0 +1,9 @@
+---
+# vars file for azure
+resource_group: nikhil_group
+vm_name: Test01
+disk_names: [disk1,disk2]
+subscription_id: d79ee1be-6f40-4998-8c01-f7dac63fac47
+tenant: b0a23ca5-6ba4-4666-8ba0-afeebb43684e
+client_id: f541147b-fd0b-4a24-b229-d197a87d1a8e
+secret: _lLQr5-lcCGo4Y-~6-REo_gH5zA27CJoht
