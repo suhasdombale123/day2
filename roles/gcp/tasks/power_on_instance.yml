@@ -4,9 +4,8 @@
          state: present
          name: "{{ instance_id }}"
          zone: "{{ zone }}"
-         project: "{{ gce_project }}"
+         project: "{{ gcp_project }}"
          auth_kind: "{{ gcp_cred_kind }}"
-         service_account_file: "{{ gce_credentials_file_path }}"
          scopes:
            - https://www.googleapis.com/auth/compute
       register: instance
