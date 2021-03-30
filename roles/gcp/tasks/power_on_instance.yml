@@ -9,7 +9,7 @@
          name: "{{ instance_id }}"
          zone: "{{ zone }}"
          project: "{{ gcp_project }}"
-         auth_kind: "{{ gcp_cred_kind }}"
+         auth_kind: "{{ gcp_cred_kind |string }}"
          status: RUNNING
          scopes:
            - https://www.googleapis.com/auth/compute
