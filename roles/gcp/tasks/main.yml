@@ -1,6 +1,6 @@
 ---
 # tasks file for gcp
- - import_tasks: extract_variables.yml
+ - import_tasks: extract_variable.yml
 
  - import_tasks: terminate_instance.yml
    when: operation == "terminate_instance"
