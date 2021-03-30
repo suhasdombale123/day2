@@ -6,9 +6,9 @@
       gcp_compute_instance:
          state: present
          deletion_protection: no
-         name: "{{ instance_id.stdout }}"
-         zone: "{{ zone.stdout }}"
-         project: "{{ gcp_project.stdout }}"
+         name: "{{ instance_id }}"
+         zone: "{{ zone }}"
+         project: "{{ gcp_project }}"
          auth_kind: "{{ gcp_cred_kind }}"
          status: RUNNING
          scopes:
