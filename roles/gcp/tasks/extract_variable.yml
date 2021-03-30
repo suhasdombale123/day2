@@ -9,3 +9,6 @@
   - debug: 
       msg: "{{ var_list.split('.')[3] }}"
     register: gcp_project
+
+  - debug:
+      msg: "{{ gcp_project }}"

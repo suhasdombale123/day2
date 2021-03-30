@@ -1,4 +1,7 @@
 ---
+    - debug:
+        msg: "{{ gcp_project }}"
+
     - name: Power On Instance
       gcp_compute_instance:
          state: present
