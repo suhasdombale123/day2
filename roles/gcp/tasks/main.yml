@@ -2,3 +2,6 @@
 # tasks file for gcp
  - import_tasks: terminate_instance.yml
    when: operation == "terminate_instance"
+
+ - import_tasks: power_on_instance.yml
+   when: operation == "power_on_instance"
