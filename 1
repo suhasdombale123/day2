@@ -1,0 +1,24 @@
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  vars:
+    var_list: "instance-1.us-central1-a.c.monitoring-308809.internal"
+  tasks:
+  - debug:
+      msg: "{{ var_list.split('.') }}"
+    register: result
+
+  - set_fact: 
+      test: "{{ result }}"
+
+  - debug: 
+      msg: "{{ test[1] }}"
+    register: instance_id
+
+  - debug: 
+      msg: "{{ result[1] }}"
+    register: zone
+
+  - debug: 
+      msg: "{{ result[3] }}"
+    register: gcp_project
