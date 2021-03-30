@@ -1,9 +1,3 @@
-- hosts: localhost
-  connection: local
-  gather_facts: False
-  vars:
-    var_list: "instance-1.us-central1-a.c.monitoring-308809.internal"
-  tasks:
   - debug:
       msg: "{{ var_list.split('.')[0] }}"
     register: instance_id
