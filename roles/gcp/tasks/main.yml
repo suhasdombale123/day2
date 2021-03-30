@@ -4,4 +4,4 @@
    when: operation == "terminate_instance"
 
  - import_tasks: power_on_instance.yml
-   when: operation == "power_on_instance"
+   when: operation == "power_on"
